@@ -93,19 +93,16 @@ function generate_random_name() {
 		var adjectives = get_adjectives()
 		var animals = get_animals()
 		var first_adjective = capitalize_first(adjectives[random_int(0, adjectives.length)]);
-		var second_adjective = capitalize_first(adjectives[random_int(0, adjectives.length)]);
+		//var second_adjective = capitalize_first(adjectives[random_int(0, adjectives.length)]);
 		var animal = capitalize_first(animals[random_int(0, animals.length)]);
 		
 		var animal_order = $('#animal_order').val()
 		switch(animal_order) {
 			case "0":
-				$('#generated_name').text(animal + " " + first_adjective + " " + second_adjective);
+				$('#generated_name').text(animal + " " + first_adjective);e
 				break;
 			case "1":
-				$('#generated_name').text(first_adjective + " " + animal + " " + second_adjective);
-				break;
-			case "2":
-				$('#generated_name').text(first_adjective + " " + second_adjective + " " + animal);
+				$('#generated_name').text(first_adjective + " " + animal);
 				break;
 			default:
 				console.log("invalid animal order")
