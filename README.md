@@ -15,6 +15,15 @@ Copy to a directory in your webhosting and run index.html.
 
 WARNING: REMOVE THE GFYCAT URLS IN PRODUCTION, LEAVE THE LOCAL COPIES ONLY in gfycat_name_generator.js animal_url_list and adjective_url_list
 
+## Docker Image Build
+```
+docker build -t project_name_gen .
+```
+
+## Docker Container Run
+```
+docker run -it -d --name <NAME> -p 80:80 project_name_gen
+```
 ## License
 **Author:** Hearto Lazor.
 
